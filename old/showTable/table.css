@@ -1,0 +1,28 @@
+.table td,
+.table th {
+  padding: 3px;
+  border-top: none;
+}
+.table thead th {
+  /* border-bottom: none;*/
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-right: 3px;
+  text-align: center;
+  background-color: sandybrown;
+  color: white;
+  font-size: large;
+  font-weight: bold;
+}
+.table tbody tr td {
+  /* border-bottom: none;*/
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-right: 3px;
+  text-align: center;
+}
+
+.table {
+  background-color: rgb(255, 255, 255);
+  overflow-y: scroll;
+}

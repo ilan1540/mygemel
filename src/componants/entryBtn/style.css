@@ -1,0 +1,26 @@
+.entry {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  margin-left: 0;
+}
+
+.circel-btn {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  background-color: #d0572d;
+  color: white;
+  font-size: larger;
+  font-size: large;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.circel-btn:hover {
+  width: 150px;
+  height: 150px;
+  background-color: rgb(7, 78, 7);
+}

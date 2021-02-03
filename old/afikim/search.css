@@ -1,0 +1,19 @@
+.search {
+  position: relative;
+  border-radius: 100px;
+  border: none;
+  background-color: rgb(228, 168, 168);
+  cursor: pointer;
+  margin: 0;
+}
+
+.search .input:hover {
+  cursor: pointer;
+}
+
+input#search.search {
+  border-radius: 100px;
+  width: 95%;
+  border-bottom: none;
+  margin: auto;
+}
