@@ -5,7 +5,7 @@ import { BrowserRouter } from 'react-router-dom';
 import {Header} from './componants/lyout/Header'
 import Routes from './componants/routes/Routes';
 import {useDispatch} from 'react-redux'
-import {afikimFull} from './componants/localDBfiles/afikimFull'
+//import {afikimFull} from './componants/localDBfiles/afikimFull'
 import {afikimShort} from './componants/localDBfiles/afikimShort'
 import {fullHeader} from './componants/localDBfiles/headerColumn'
 import {shortHeader} from './componants/localDBfiles/shortHeader'
@@ -21,7 +21,7 @@ function App() {
 
 	useEffect(() => {
 	dispatch(getAfikimShort(afikimShort))
-	dispatch(getAfikimFull(afikimFull))
+//dispatch(getAfikimFull(afikimFull))
 	dispatch(getFullHeader(fullHeader));
 	dispatch(getShortHeader(shortHeader))
 	dispatch(getGemelUrl(gemelUrl))
