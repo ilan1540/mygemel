@@ -13,7 +13,7 @@ import {gemelUrl} from './componants/localDBfiles/gemlUrl'
 
 
 import {getAfikimFull,getAfikimShort,getFullHeader,getShortHeader,getGemelUrl} from './componants/redux/actionReducer'
-import './App.css'
+//import './App.css'
 
  
 function App() {

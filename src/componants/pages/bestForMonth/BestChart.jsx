@@ -63,8 +63,8 @@ useEffect(() => {
 
 
   return (
-    <div className="p-2">
-    <Bar
+    <div className="p-2 bg-white">
+    <Bar 
      data={data}
      options={options}
      width={800}

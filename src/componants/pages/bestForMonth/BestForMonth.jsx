@@ -108,24 +108,12 @@ const navHeandel= (name)=>{
       >סוף</button>
 </nav>
     </div>
-        <div className="container">
-        <BestChart
+        <div className="container mt-4">
+        <BestChart 
         data1={lastFive}
         />
       </div>
 
-      
-      <div className="d-flex justify-content-center ">
-       
-          <button 
-      type="button"
-       className="btn btn-success"
-       onClick={()=>setShowCart(!showChart)}
-       >תצוגת כרטיסיות</button>
-      
-
-      </div>
-     
     </div>
   )
 }

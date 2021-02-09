@@ -110,31 +110,29 @@ data &&  data.map((r)=>{
      <nav className="navbar navbar-expand-lg navbar-dark bg-dark mt-2 border-radius">
      <form className="d-flex">
      <ul className="navbar-nav me-auto mb-2 mb-lg-0"> 
-      <li className="nav-item">
+      <li className="form-control">
       <input type="text" className="form-control" 
       value={fundId}
     onChange={(e)=>
       {onChangeFilter(e.target.value)
       setfundId(e.target.value)}}
       onFocus={()=>setfundId('')}
-    placeholder="אפיק השקעה"/>
+    placeholder=" אפיק"/>
       </li>
-      <li className="nav-item mx-1">
+      <li className="form-control mx-1">
       <SelectDate
       date={fDate}
       setDate={setFdate}
-       className="form-control be-2  " type="search" placeholder="מתאריך"/>
+       className="form-control be-2 "  placeholder="מתאריך"/>
       </li>
-    <li className="nav-item ">
+    <li className="form-control ">
       <SelectDate
       date={uDate}
       setDate={setUdate}
-      className="form-control me-2" type="search" placeholder="עד תאריך"/>
+      className=" me-2"  placeholder="עד תאריך"/>
     </li>
        </ul>
-       <div className="navbar-brand">
-          {data && data[0] ?(<h4>{ data[0].FUND_ID}-{ data[0].FUND_NAME}</h4>):null}
-          </div>
+       
        </form>
           
        </nav>
@@ -149,12 +147,17 @@ data &&  data.map((r)=>{
       setFilter([])}
     }
      >
-       <i className="far fa-check-circle"></i>
         {rec.FUND_ID}-{rec.FUND_NAME}</li>)}
         </ul>
         </div>
+        
+        
         {data.length>0 ? (
-          <div className="col-md-9">
+ 
+       <div className="col-md-9 bg-white mt-3">
+           <div className="navbar-brand">
+          {data && data[0] ?(<h4 style={{color:'black'}}>{ data[0].FUND_ID}-{ data[0].FUND_NAME}</h4>):null}
+          </div>
         <Chartjs
         data={aficTesua}
         xlable={afickMonth}
@@ -163,6 +166,9 @@ data &&  data.map((r)=>{
         />
        </div>
         ):null}
+
+
+
        </div>
      </div>
   )

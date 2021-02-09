@@ -4,6 +4,7 @@ import {useSelector} from 'react-redux'
 //import {stringToFormtMMYYYY,numberWithCommas} from '../../redux/globalFunc'
 import { SelectDate } from '../../helper/SelectDate'
 import {subClassList} from './subList'
+//import { ShowTable } from './ShowTable'
 
 export const ShowForSog = () => {
 //  const [fundId, setfundId] = useState([])
@@ -71,6 +72,7 @@ setgroup(group);
 }, [data])
   
 //-------group data per afick and cala tshua ----------------
+
 useEffect(() => {
   let newData = []
   let tsua = 0
@@ -120,37 +122,7 @@ useEffect(() => {
    }, [classSification,subClassSification,dataWithTsua,uDate])
 
 
-   console.log(dataForLastMonth)
-
-
-  
-
-/*
-  const onChangeFilter =(param)=>{
-    if(param!=null){
-      setFilter(
-        short.filter((rec)=>{  
-        return  `${rec.FUND_ID}  ${rec.FUND_NAME}`.includes(param)} )
-      )
-    }
-    if(param===""){
-      setFilter([])
-      setdata([])
-    }
-  }
-
-  const onSelectClass =(e)=>{
-    setClssSification(e.target.value)
-    if (classSification != null) {
-     setFilter(
-       dataWithTsua.filter((rec)=>rec.FUND_CLASSIFICATION ===classSification)
-     )
-     console.log(filter)
-    }
-  }
-  */
-
-
+   
   return (
     <div className="">
      <nav className="navbar navbar-expand-lg navbar-dark bg-dark mt-2 border-radius">
@@ -188,21 +160,15 @@ useEffect(() => {
        </form>
           
        </nav>
-       <div className="container">
+       <div className="container mt-3">
         {data.length>0 ? (
           <div className="col-md-12">
-        <table className="table">
-         <thead>
+        <table className="table table-striped table-dark">
+         <thead >
            <tr>
              <th scope="col">מספר אפיק</th>
              <th scope="col">שם אפיק</th> 
-             <th scope="col">מסלול</th>
-             <th scope="col">ממוצע דמי ניהול</th>
              <th scope="col">סך נכסים</th>
-             <th scope="col">אחוז נכסים נזילים</th>
-             <th scope="col">חשיפה למניות</th>
-             <th scope="col">חשיפה לחו"ל</th>
-             <th scope="col">חשיפה למט"ח</th>
              <th scope="col">תשואה מצטברת</th>
            </tr>
          </thead>
@@ -211,14 +177,10 @@ useEffect(() => {
            <tr key={r._id}>
            <td>{r.FUND_ID}</td>
            <td>{r.FUND_NAME}</td>
-           <td>{r.SPECIALIZATION}</td>
-           <td>{r.AVG_ANNUAL_MANAGEMENT_FEE}%</td>
            <td>{r.TOTAL_ASSETS}</td>
-<td>{r.LIQUID_ASSETS_PERCENT}%</td>
-<td>{r.STOCK_MARKET_EXPOSURE}</td>
-<td>{r.FOREIGN_EXPOSURE}</td>
-<td>{r.FOREIGN_CURRENCY_EXPOSURE}</td>
            <td>{(r.tsua*100).toFixed(2)}%</td>
+
+           
           
            </tr>
            )}           

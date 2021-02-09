@@ -8,7 +8,7 @@ export const Chartjs = ({data,xlable,teor}) => {
     datasets: [{
       label: 'תשואה',
           data: [...data],
-          backgroundColor : 'rgba(255,99,132,0.2)',
+          backgroundColor : 'rgba(161,104,115,0.8)',
           borderColor: '#39bb44',
           borderWidth:7
     }],
@@ -45,7 +45,7 @@ export const Chartjs = ({data,xlable,teor}) => {
      data={data1}
      options={options}
      width={800}
-    height={450}
+    height={390}
      />
     </div>
   )
