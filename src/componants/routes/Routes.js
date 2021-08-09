@@ -12,17 +12,19 @@ import { BestForMonth } from '../pages/bestForMonth/BestForMonth';
 import { EnteryBtn } from '../entryBtn/EnteryBtn';
 import { ShowFundId } from '../pages/showFundid/ShowFundId';
 import { ShowForSog } from '../pages/showforsogkopa/ShowForSog';
+import { ShowFromYahoo } from '../pages/showfromyahoo/ShowFromYahoo';
 
 
 const Routes = () => {
   return (
     <Switch>
-    <Route exact path="/" component={EnteryBtn} />
-      
+      <Route exact path="/" component={EnteryBtn} />
+
       <Route exact path="/bestformonth" component={BestForMonth} />
       <Route exact path="/showfundid" component={ShowFundId} />
       <Route exact path="/showforsog" component={ShowForSog} />
-      </Switch>
+      <Route exact path="/yahoo" component={ShowFromYahoo} />
+    </Switch>
   );
 };
 
@@ -37,5 +39,5 @@ export default Routes;
       <Route exact path="/apinext" component={ApiNext} />
       <Route exact path="/showafikim" component={ShowAfikimList} />
       <Route exact path="/showResult/:afikim" component={ShowResult} />
- 
+
 */
